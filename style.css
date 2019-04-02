@@ -138,20 +138,24 @@ h2 {
 }
 
 body {
-  background: #8f82a0;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #313866), to(#576081));
+  background: linear-gradient(to right, #313866 20%, #576081);
   height: 100vh;
   color: #fff;
+  font-family: 'Lato', sans-serif;
 }
 
-.list-title {
-  text-align: center;
-  padding: 20px 0;
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
 }
 
 .list-display {
   width: 400px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 4px;
   background: -webkit-gradient(linear, left top, right bottom, from(#756788), to(#313866));
   background: linear-gradient(to bottom right, #756788, #313866);
   position: fixed;
@@ -159,31 +163,114 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -20%);
           transform: translate(-50%, -20%);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(244, 158, 49, 0.1);
+          box-shadow: 0px 0px 5px 5px rgba(244, 158, 49, 0.1);
 }
 
-form {
+.list-display .list-title {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.list-display ul {
+  margin-bottom: 15px;
+}
+
+.list-display ul li {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  padding: 10px 0 10px 25px;
+  border-radius: 3px;
+  background: #756788;
+  -webkit-box-shadow: 10px 10px 8px #313866;
+          box-shadow: 10px 10px 8px #313866;
 }
 
-input {
-  width: 100%;
-  background: skyblue;
-  padding: 0;
+.list-display .user-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-display .user-input input[type='text'] {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0 10px 25px;
+  color: #fff;
+  background: rgba(117, 103, 136, 0.4);
+  border-radius: 3px;
   border: none;
 }
 
-li {
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 3px;
-  background: #756788;
+.list-display .user-input input[type='text']::-webkit-input-placeholder {
+  color: #fff;
 }
 
-li div {
-  width: 80%;
-  margin: 0 auto;
+.list-display .user-input input[type='text']:-ms-input-placeholder {
+  color: #fff;
+}
+
+.list-display .user-input input[type='text']::-ms-input-placeholder {
+  color: #fff;
+}
+
+.list-display .user-input input[type='text']::placeholder {
+  color: #fff;
+}
+
+.list-display .user-input .btn {
+  display: block;
+  position: relative;
+  top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#f49e31), to(#ce780b));
+  background: linear-gradient(to bottom right, #f49e31, #ce780b);
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  z-index: 2;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.list-display .user-input .btn span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #f49e31;
   padding: 10px 0;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+.list-display .user-input .btn span:hover {
+  background: transparent;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
 }
 /*# sourceMappingURL=style.css.map */

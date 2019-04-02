@@ -11,20 +11,23 @@ h2 {
 }
 
 body {
-    background: lighten($primary-color-sub, 10);
+    background: linear-gradient(to right, $primary-color 20%, #576081);
     height: 100vh;
     color: #fff;
+    font-family: 'Lato', sans-serif;
 }
 
-.list-title {
-    text-align: center;
-    padding: 20px 0;
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
 }
 
 .list-display {
     width: 400px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding-bottom: 4px;
     background: linear-gradient(
         to bottom right,
         $primary-color-sub,
@@ -34,28 +37,82 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -20%);
-}
+    box-shadow: 0px 0px 5px 5px rgba($color: $secondary-color, $alpha: 0.1);
 
-form {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-input {
-    width: 100%;
-    background: skyblue;
-    padding: 0;
-    border: none;
-}
+    .list-title {
+        text-align: center;
+        padding: 20px 0;
+    }
 
-li {
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 3px;
-    background: $primary-color-sub;
-}
-li div {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 0;
+    ul {
+        margin-bottom: 15px;
+
+        li {
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px 0 10px 25px;
+            border-radius: 3px;
+            background: $primary-color-sub;
+            box-shadow: 10px 10px 8px $primary-color;
+        }
+    }
+    .user-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        input[type='text'] {
+            font-size: 1rem;
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px 0 10px 25px;
+            color: #fff;
+            background: rgba($color: $primary-color-sub, $alpha: 0.4);
+            border-radius: 3px;
+            border: none;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+
+        .btn {
+            display: block;
+            position: relative;
+            top: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            background: linear-gradient(
+                to bottom right,
+                $secondary-color,
+                darken($secondary-color, 15)
+            );
+            border: none;
+            border-radius: 20px;
+            width: 180px;
+            z-index: 2;
+            transition: all 0.5s;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                background: $secondary-color;
+                padding: 10px 0;
+                transition: all 0.9s;
+
+                &:hover {
+                    background: transparent;
+                    transition: all 0.9s;
+                }
+            }
+        }
+    }
 }
