@@ -1,0 +1,61 @@
+// @import 'reset';
+
+// $primary-color: #313866;
+// $primary-color-sub: #756788;
+// $secondary-color: #f49e31;
+
+// $font-heading: 1.6rem;
+
+// h2 {
+//     font-size: $font-heading;
+// }
+
+// body {
+//     background: lighten($primary-color-sub, 10);
+//     height: 100vh;
+//     color: #fff;
+// }
+
+// .list-title {
+//     text-align: center;
+//     padding: 20px 0;
+// }
+
+// .list-display {
+//     width: 400px;
+//     margin: 0 auto;
+//     padding-bottom: 20px;
+//     background: linear-gradient(
+//         to bottom right,
+//         $primary-color-sub,
+//         $primary-color
+//     );
+//     position: fixed;
+//     top: 30%;
+//     left: 50%;
+//     transform: translate(-50%, -20%);
+// }
+
+// form {
+//     width: 80%;
+//     margin: 0 auto;
+//     margin-bottom: 20px;
+// }
+// input {
+//     width: 100%;
+//     background: skyblue;
+//     padding: 0;
+//     border: none;
+// }
+
+// li {
+//     width: 90%;
+//     margin: 0 auto;
+//     border-radius: 3px;
+//     background: $primary-color-sub;
+// }
+// li div {
+//     width: 80%;
+//     margin: 0 auto;
+//     padding: 10px 0;
+// }
